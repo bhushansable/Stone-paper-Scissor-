@@ -1,5 +1,6 @@
+/* HEADER */
 #header{
-    height: 100px;
+    padding: 20px 0;
     width: 100%;
     background-color: darkorchid;
     color: whitesmoke;
@@ -9,128 +10,96 @@
 }
 
 #title{
-    font-size: 2rem;
+    font-size: clamp(16px, 4vw, 32px);
 }
 
+
+/* MAIN AREA */
 #main{
-    height: 350px;
     width: 100%;
 }
 
 #choice{
-    height: 300px;
     width: 100%;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+
+/* GAME ELEMENT BUTTONS */
+.element{
+    width: 25vw;
+    height: 25vw;
+    max-width: 150px;
+    max-height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
 }
 
 .border{
-    border: 1.5px solid transparent;
+    border: 2px solid transparent;
 }
 .border:hover{  
      border: 4px solid black;
 }
 
-.element{
-    height: 200px;
-    width: 200px;
-    background-color: red;
-    position: relative;
-    top: 30px;
-    border-radius: 50%;
- 
-}
 
+/* IMAGES */
 #Stone{
     background-image: url(Image/R.jpeg);
-    background-size: cover;
 }
-
 #Paper{
     background-image: url(Image/p.jpeg);
-    background-size: cover;
 }
-
 #Scissors{
     background-image: url(Image/S.jpeg);
-    background-size: cover;
 }
 
+
+/* SCOREBOARD */
 #scorebord{
-    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-#u{
-   font-size: 50px;
-}
-#c{
-    font-size: 50px;
+    padding: 15px 0;
 }
 
-#u-{
-   font-size: 30px;
+#u, #c{
+    font-size: clamp(20px, 6vw, 40px);
 }
-#c-{
-    font-size: 30px;
+#u-, #c-{
+    font-size: clamp(16px, 5vw, 30px);
 }
 
+
+/* MESSAGE BOX */
 #meg {
-    position: absolute;
-    bottom: 50px;
-    left: 35%;
-    font-size: 50px;
-    height: 100px;
+    position: relative;
+    margin: 20px auto;
+    font-size: clamp(18px, 6vw, 40px);
     background: yellow;
     text-align: center;
     border-radius: 10px;
+    padding: 10px 20px;
+    width: fit-content;
 }
 
 
-/* moblie */
+/* MOBILE */
 @media (max-width:480px) {
-    .border{
-    border: 1.5px solid transparent;
-}
-.border:hover{  
-     border: 2px solid black;
-}
 
     .element{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    position: relative;
-    top: 30px;
-    border-radius: 50%;
- 
-}
+        width: 28vw;
+        height: 28vw;
+        max-width: 110px;
+        max-height: 110px;
+    }
 
-#meg {
-    position: absolute;
-    bottom: 50px;
-    left: 35%;
-    font-size: 30px;
-    height: 100px;
-    background: yellow;
-    text-align: center;
-    border-radius: 10px;
-}
-
-
-#title{
-    font-size: 1rem;
-}
-
-#scorebord {
-        height: 100px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-        bottom: 150px;
+    #scorebord{
+        padding-top: 10px;
+        gap: 20px;
     }
 }
