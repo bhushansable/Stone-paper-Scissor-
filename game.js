@@ -10,7 +10,7 @@ const Meg = document.querySelector("#meg");
 
 // Random choice
 const gameChoices = () => {
-    const arr = ["stone", "paper", "scissor"];
+    const arr = ["stone", "paper", "scissors"];
     const ran = Math.floor(Math.random() * 3);
     return arr[ran];
 };
@@ -46,7 +46,7 @@ const palyGame = (userChoice) => {
             userWin = comChoice === "paper" ? false : true;
         } 
         else if (userChoice === "paper") {
-            userWin = comChoice === "scissor" ? false : true;
+            userWin = comChoice === "scissors" ? false : true;
         }
         else {
             userWin = comChoice === "stone" ? false : true;
